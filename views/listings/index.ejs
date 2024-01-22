@@ -1,0 +1,14 @@
+<% layout("layouts/boilerplate") %>
+<body>
+  <% for(let list of listings){ %>
+  <a href = "/listings/<%= list.id %>">
+    <%= list.title %>
+  </a>
+  <br>
+  <% } %>
+  <a href = "/listings/new">
+    Create new
+  </a>
+</body>
+
+
