@@ -1,0 +1,48 @@
+/******* FOOTER **********/
+footer {
+  padding: 0.5rem;
+}
+
+.icon_tag-div {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 400;
+  font-size: 110%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.icon_tag-div img {
+  width: 1rem;
+}
+
+.pair-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#copyright-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+  footer {
+    background: white;
+  }
+}

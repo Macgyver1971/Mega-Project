@@ -1,16 +1,40 @@
-<% layout("layouts/boilerplate") %>
+<% layout("/layouts/boilerplate.ejs") %>
 <body>
-  <h3>
-    Create a new listinf
-  </h3>
-  <form method = "post" action = "/listings">
-    <input name = "title" placeholder="Enter the title"type = "text" required>
-    <textarea name = "description" placeholder="Description" type=
-    "text"></textarea>
-    <input name = "image" placeholder="Enter the image link" type = "text">
-    <input name = "price" placeholder="Price" type = "number" required>
-    <input name = "location" placeholder="Enter the location" type = "text" required="">
-    <input name = "country" placeholder="Enter the country" type = "text" required="">
-    <button>Add</button>
+  <h3 id = "new-listing-tag">
+    Create a New Listing 
+  </h2>
+  <form method = "post" action = "/listings" class = "new-form">
+    <div class = "label_input">
+      <label for = "title">Title*</label><br>
+      <input name = "title" placeholder="Type a catchy title"type = "text" required>
+    </div>
+    <div class = "label_input">
+      <label for = "description">Description</label><br>
+      <textarea name = "description" placeholder="Description *max 150 character" type=
+      "text" cols = "30"></textarea>
+    </div>
+    <div class = "label_input">
+      <label for = "image">Image</label><br>
+      <input name = "image" placeholder="Enter the image link" type = "text">
+    </div>
+    <div class = "price_location">
+      
+      <div class = "label_input">
+        <label for = "price">Price*</label><br>
+        <input name = "price" placeholder="Price" type = "number" required>
+      </div>
+      <div class = "label_input">
+        <label for = "location">Location*</label><br>
+        <input name = "location" placeholder="Enter the location" type = "text" required="">
+      </div>
+    
+    </div>
+    <div class = "label_input">
+      <label for = "country">Country*</label><br>
+      <input name = "country" placeholder="Enter the country" type = "text" required="">
+    </div>
+    <div class = "button-div">
+      <button id = "new-add-btn">Create</button>
+    </div>
   </form>
 </body>

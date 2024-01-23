@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 app.set("views", path.join(__dirname, "views"));
 app.use(methodOverride("_method"));
-app.engine("ejs", ejsMate);
+app.engine("ejs",ejsMate)
 app.listen(3000, () => {
   console.log("Server on port 3000");
 });
@@ -91,7 +91,7 @@ app.put("/listings/:id", (req, res) => {
     });
 });
 
-//delete route
+//DELETE ROUTE
 
 app.delete("/listings/:id", (req, res) => {
   let { id } = req.params;

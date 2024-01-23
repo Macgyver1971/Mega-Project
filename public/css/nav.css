@@ -1,0 +1,142 @@
+/******* NAVBAR **********/
+#nav-logo {
+  padding: 1rem;
+}
+
+#nav-logo a {
+  text-decoration: none;
+  color: #ff385c;
+}
+
+.nav-dropdown a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.nav-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  height: 0;
+  padding: 0.1rem 0.1rem;
+  transition: 0.3s;
+  transform: translateY(-2vh);
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+
+.hamburger-logo_icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-input:checked ~ .nav-dropdown {
+  height: 14vh;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-dropdown a {
+  align-self: flex-start;
+  padding: 0.3rem 1rem;
+  border-radius: 0.4rem;
+}
+
+.hamburger-icon,
+.hamburger-icon:before,
+.hamburger-icon:after {
+  display: flex;
+  background: rgba(0, 0, 0, 0.7);
+  height: 0.2rem;
+  width: 1.5rem;
+  border-radius: 0.25rem;
+  transition: 0.2s;
+}
+
+.hamburger-icon:before {
+  content: "";
+  position: absolute;
+  transform: translateY(0.5rem);
+}
+.hamburger-icon:after {
+  content: "";
+  transform: translateY(-0.5rem);
+}
+
+#hamburger-input:checked + .hamburger-icon {
+  transform: rotate(45deg);
+}
+
+#hamburger-input:checked + .hamburger-icon:before {
+  transform: rotate(90deg);
+}
+#hamburger-input:checked + .hamburger-icon:after {
+  display: none;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  z-index: 100;
+}
+
+@media screen and (min-width: 500px) {
+  .hamburger-icon {
+    display: none;
+  }
+  .nav-dropdown {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    gap: 1rem;
+  }
+  .nav-dropdown a {
+    padding: 0;
+    margin: 0;
+  }
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+  }
+  #nav-logo {
+    font-size: 2.3rem;
+  }
+  .nav-dropdown {
+    font-size: 1.3rem;
+  }
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+  nav {
+    background: black;
+  }
+  .nav-dropdown a {
+    color: white;
+  }
+  .hamburger-icon,
+  .hamburger-icon:before,
+  .hamburger-icon:after {
+    background: white;
+  }
+}

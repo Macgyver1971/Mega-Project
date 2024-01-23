@@ -1,14 +1,28 @@
-<% layout("layouts/boilerplate") %>
+<% layout("/layouts/boilerplate.ejs") %>
 <body>
-  <% for(let list of listings){ %>
-  <a href = "/listings/<%= list.id %>">
-    <%= list.title %>
-  </a>
-  <br>
+  <div class = "cards">
+    
+  <% for(let card of listings){ %>
+  <div class = "card" onclick = "window.location.href = '/listings/<%= card.id
+  %>'">
+    <div class = "card-image">
+      <img src = "<%= card.image %>">
+    </div>
+    <div class = "card-info">
+      <div class = "card-title">
+        <%= card.title %>
+      </div>
+      <div class = "card-location">
+        <%= card.location %>, <%= card.country %>
+      </div>
+      <div class = "card-price">
+        <b>&#2547;<%= card.price %></b> night
+      </div>
+    </div>
+  </div>
   <% } %>
-  <a href = "/listings/new">
-    Create new
-  </a>
+    
+  </div>
 </body>
 
 
