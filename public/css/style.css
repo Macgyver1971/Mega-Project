@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   user-select: none;
   height: 100vh;
   display: flex;
@@ -19,7 +19,7 @@ body {
 /******* CARD STYLING**********/
 
 .card {
-  font-family: "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   margin: 2rem 1.5rem;
   border-radius: 1rem;
   transition: 0.2s;
@@ -37,7 +37,7 @@ body {
   width: 100%;
   border-radius: 1rem;
   object-fit: cover;
-  height: 35vh;
+  height: 32vh;
 }
 
 .card-info {
@@ -85,6 +85,217 @@ body {
   }
 }
 
+/******* NEW FORM ******/
+
+.new-form {
+  padding: 0 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.new-form input {
+  width: 100%;
+  height: 1.8rem;
+  border-radius: 0.3rem;
+  margin: 0.1rem 0 0.5rem 0;
+  border: none;
+  padding: 0.5rem;
+  font-family: inherit;
+  border: 0.12px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: 0.1s;
+}
+
+.new-form input:focus,
+.new-form textarea:focus {
+  border: 1px solid black;
+  transform: scale(1.02);
+}
+
+.new-form textarea {
+  border: 0.12px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  height: 5rem;
+  outline: none;
+  transition: 0.1s;
+  font-size: 0.9rem;
+}
+
+.label_input {
+  margin: 0.5rem;
+}
+
+.label_input label {
+  font-size: 85%;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#new-add-btn {
+  padding: 0.3rem 0.7rem;
+  background: #ff385c;
+  border-radius: 0.5rem;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.new-form .button-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.new-listing-tag {
+  margin: 1rem 1.5rem 2rem 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.new-listing-tag p {
+  font-size: 70%;
+  font-weight: 200;
+  display: inline-block;
+}
+
+.show-card-image {
+  width: 100%;
+}
+
+.show-card-image img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+}
+
+.card-show-info {
+  padding: 0.7rem 2rem;
+  color: #222222;
+}
+
+.card-show-location {
+  font-weight: 600;
+  margin: 0.1rem 0 0.5rem 0;
+  font-size: 95%;
+}
+
+.card-show-desc {
+  margin-bottom: 1rem;
+}
+
+.edit-btn {
+  text-decoration: none;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0.5rem;
+  background: #ff385c;
+  color: white;
+  font-weight: 500;
+}
+
+.edit_delete-btn {
+  display: flex;
+  padding: 1rem 3rem;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.delete-btn {
+  background: black;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  height: 60vh;
+  flex-direction: column;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.error-messages p:nth-child(2) {
+  font-weight: bold;
+  color: black;
+}
+#error-page-status {
+  font-weight: 900;
+  font-family: inherit;
+  font-size: 4rem;
+  color: #e5e7ea;
+}
+
+#go-error-home {
+  background: #ff385c;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.reviws-label_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.reviews-form {
+  width: 70%;
+  padding: 1rem;
+}
+
+.reviews-form button {
+  border: 0.5px solid black;
+  background: white;
+  font-family: inherit;
+  padding: 0.3rem 0.6rem;
+  font-weight: 400;
+  border-radius: 0.3rem;
+  transition: 0.2s;
+}
+
+.reviews-form button:hover {
+  background: black;
+  color: white;
+}
+.review-form-container {
+  padding: 1rem 0.5rem;
+}
+
+.review-form-container textarea {
+  outline: none;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 500px) {
+  .price_location {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+  }
+}
+
 @media screen and (prefers-color-scheme: dark) {
   body {
     background: black;
@@ -97,80 +308,20 @@ body {
   .card-price {
     color: white;
   }
-}
-
-/******* NEW FORM ******/
-
-.new-form {
-  padding: 0 1rem;
-  font-family: "Inter", sans-serif;
-  width: 80%;
-  margin-bottom: 3rem;
-}
-
-.new-form input {
-  width: 100%;
-  height: 1.8rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-  border: none;
-  padding: 0.5rem;
-  font-family: "Work Sans", sans-serif;
-  background: ghostwhite;
-}
-
-.new-form textarea {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  width: 100%;
-  padding: 0.5rem;
-  height: 5rem;
-  background: ghostwhite;
-  border: none;
-}
-
-.label_input {
-  margin: 0.5rem;
-}
-
-.label_input label {
-  font-size: 90%;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-input::placeholder {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-#new-add-btn {
-  padding: 0.3rem 0.7rem;
-  background: #ff385c;
-  border-radius: 0.5rem;
-  color: white;
-  border: none;
-  font-weight: 500;
-  font-family: "Work Sans", Sans-Serif;
-  letter-spacing: 0.1rem;
-}
-
-.new-form .button-div {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#new-listing-tag {
-  margin: 1rem 1.5rem 0 1.5rem;
-  color:rgba(0,0,0,.7);
-  font-family: "Work Sans", sans-serif;
-}
-
-@media screen and (min-width: 500px) {
-  .price_location {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 2fr;
-    gap: 0;
+  .new-form input {
+    border: rgba(255, 255, 255, 0.2);
+  }
+  .label_input label {
+    color: floralwhite;
+  }
+  .new-listing-tag {
+    color: floralwhite;
+  }
+  .delete-btn {
+    background: white;
+    color: black;
+  }
+  .card-show-info {
+    color: ghostwhite;
   }
 }

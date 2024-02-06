@@ -1,23 +1,56 @@
 <% layout("/layouts/boilerplate.ejs") %>
 <body>
-  <h3>
-    Edit
+  <h3 class = "new-listing-tag">
+    Edit your listing
   </h3>
-  <form method = "post" action = "/listings/<%= list.id %>?_method=PUT">
-    <input name = "listing[title]" placeholder="Enter the title"type = "text" required
-    value = "<%= list.title %>">
-    <textarea name = "listing[description]" placeholder="Description" type=
-    "text"><%= list.description %></textarea>
-    <input name = "listing[image]" placeholder="Enter the image link" type = "text" value
-    = "<%= list.image %>">
-    <input name = "listing[price]" placeholder="Price" type = "number" value = "<%=
-    list.price %>" required>
-    <input name = "listing[location]" placeholder="Enter the location" type = "text"
-    value = "<%= list.location %>" required="">
-    <input name = "listing[country]" placeholder="Enter the country" type = "text" value
-    = "<%= list.country %>" required="">
-    <button>Submit</button>
+  <form method = "post" action = "/listings/<%= list.id %>?_method=PUT" class = "new-form validate-form" >
+  
+    <div class = "label_input">
+      <label for = "title">Title*</label><br>
+      <input name = "listing[title]" placeholder="Edit title"type = "text"
+      requiredFill = "true"
+      value = "<%= list.title %>">
+    </div>
+    <div class = "label_input">
+      <label for = "description">Description</label><br>
+      <textarea name = "listing[description]" type=
+      "text"><%= list.description %></textarea>
+    </div>
+    <div class = "label_input">
+      <label for = "image">Image</label><br>
+      <input name = "listing[image]" placeholder="Enter the image link" type = "text" value
+      = "<%= list.image %>" requiredFill = "true">
+    </div>
+    <div class = "price_location">
+    
+      <div class = "label_input">
+        <label for = "price">Price*</label><br>
+        <input name = "listing[price]" type = "number" value = "<%=
+        list.price %>" requiredFill = "true">
+      </div>
+      <div class = "label_input">
+        <label for = "location">Location*</label><br>
+        <input name = "listing[location]" placeholder="Enter your desired location" type = "text"
+        value = "<%= list.location %>" requiredFill = "true">
+      </div>
+      
+    </div>
+    <div class = "label_input">
+      <label for = "country">Country*</label><br>
+      <input name = "listing[country]" type = "text" value
+        = "<%= list.country %>" requiredFill = "true">
+    </div>
+    
+    
+    
+    
+    
+    <div class = "button-div">
+      <button id = "new-add-btn">Submit</button>
+    </div>
   </form>
+  
+   <script src = "/js/formValidation.js">
 </body>
 
 

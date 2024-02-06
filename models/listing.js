@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Reviews = require("./reviews.js");
 
 const listingSchema = mongoose.Schema({
   title: {
@@ -12,9 +13,11 @@ const listingSchema = mongoose.Schema({
   image: {
     type: String,
     default:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxCT-DFuo1EHQbG30Q97GjQ6I8Skh1t3Q-w&usqp=CAU",
-    set: v=>
-    v==""?"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxCT-DFuo1EHQbG30Q97GjQ6I8Skh1t3Q-w&usqp=CAU":v
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxCT-DFuo1EHQbG30Q97GjQ6I8Skh1t3Q-w&usqp=CAU",
+    set: v =>
+      v == ""
+        ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxCT-DFuo1EHQbG30Q97GjQ6I8Skh1t3Q-w&usqp=CAU"
+        : v
   },
   price: {
     type: Number,
@@ -27,7 +30,13 @@ const listingSchema = mongoose.Schema({
   country: {
     type: String,
     required: true
-  }
+  },
+  reviews: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Reviews"
+    }
+  ]
 });
 
 const Listing = mongoose.model("Listing", listingSchema);

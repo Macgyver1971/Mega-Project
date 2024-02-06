@@ -8,7 +8,7 @@ footer {
   align-items: center;
   gap: 0.3rem;
   font-weight: 400;
-  font-size: 110%;
+  font-size: 100%;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -38,11 +38,23 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
+  font-size: 90%;
 }
-
 
 @media screen and (prefers-color-scheme: dark) {
   footer {
-    background: white;
+    background: black;
+  }
+  .icon_tag-div {
+    color: ghostwhite;
+  }
+  .icon_tag-div img {
+    display: none;
+  }
+  .pair-container {
+    gap: 5rem;
+  }
+  .social-media-icons {
+    color: ghostwhite;
   }
 }
